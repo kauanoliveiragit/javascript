@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Origem</title>
+</head>
+<body>
+    <h1>Descobrindo se a pessoa é Estrangeira ou Brasileira</h1>
+    <div>
+        <p>Digite o seu país de origem: <input type="text" name="txtpais" id="txtpais"></p>
+        <input type="button" value="Verificar" onclick="verificar()">
+        <p id="resposta">Você é: </p>
+    </div>
+
+    <script>
+        function verificar() {
+            var pais = window.document.querySelector('input#txtpais').value.trim().toLowerCase()
+            var res = window.document.querySelector('p#resposta')
+            if (pais == 'brasil') {
+                res.innerHTML = 'Você é: Brasileiro'
+            } else {
+                res.innerHTML = 'Você é: Estrangeiro'
+            }
+        }
+    </script>
+</body>
+</html>
